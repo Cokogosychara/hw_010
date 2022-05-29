@@ -47,8 +47,12 @@ nav+p{
 }
 .iner-menu-items .iner-menu-items{
     width: 100%;
-    left: 100%;
+    left:100px;
     top: 0;
+}.iner-menu-items .iner-menu-items .iner-menu-items{
+    width: 100%;
+    left:-100px;
+    top:0;
 }
 
     
