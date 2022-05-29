@@ -45,6 +45,11 @@ nav+p{
 .nav-list:hover>.iner-menu-items{
     display: block;      
 }
+.iner-menu-items .iner-menu-items{
+    width: 100%;
+    left: 100%;
+    top: 0;
+}
 
     
 
