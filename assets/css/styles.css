@@ -1,56 +1,75 @@
 
 :root{
+    /* задал цвет который буду использовать в проэкте */
     --color-dark:#a14f4f;
     --color-norm:#9d7b7b;
     --color-link:#ecdddd;
 }
 body{   
+    /* задал наследуемые стили  */
     margin: 20px;
     font-size: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 nav+p{
+    /* обратился к сосоеду блока  */
     width: 900px;
     margin-top: 25px;
     line-height: 25px; 
 }
 
 .nav-list{
+    /* братился к li  */
+    /* блочно строчный блок */
     display: inline-block;
+    /* задал от какого блока будет отталкиваться размер position:absolute; */
     position: relative; 
     background-color:var(--color-norm);
     color: var(--color-link);
 }
 .link{
+    /* обращаемся к сылке А */
+    /* дисплей блок */
     display: block;
+    /* задаем ему размер */
     width: 100px;
     padding: 10px;
+    /* все новые слова с новой строки */
     text-transform:capitalize;
-    text-decoration: none;
+    /* текст по центру */
     text-align: center; 
     
 }
 .nav-list:hover{
+    /* при наведении на пункт меню будет меняться цвет  */
     background-color:var(--color-dark);
 }
 .iner-menu-items{
+    /* обращаемся к поткункту */
+    /* блок не видемый  */
     display: none;
+    /* позиция блоков вырезаная */
     position: absolute;
+    /* ращет размера от родителя корорый выше  position: relative;  */
     left: 0;
     right: 0;
 }
-.iner-menu-items>.nav-list{
-   display: block;
-}
 .nav-list:hover>.iner-menu-items{
+    /* при наведени на пунте меню появиться скрыты блок меню. который мы скрывали выше  */
     display: block;      
 }
 .iner-menu-items .iner-menu-items{
+    /* обращаемся к вкладку под меню */
+    /* задаем ширину в працентах от родителя  */
     width: 100%;
+    /* вырежит блок в правую сторону на 100рх ( на размер блока) */
     left:100px;
+    /* подтягиваем блок к 0лю блока который раскладываеться ( если 0ль убрать то блок появиться в нижней части угла ) */
     top: 0;
 }.iner-menu-items .iner-menu-items .iner-menu-items{
+    /* обращаюсь к третему пункту меню который будет появляться уже с правой стороны */
     width: 100%;
+    /* устанавил с - поскольку в право по другому не получилось поставить( поставил поскольку практиковался) */
     left:-100px;
     top:0;
 }
